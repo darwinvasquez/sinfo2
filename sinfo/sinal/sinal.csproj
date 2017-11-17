@@ -2434,6 +2434,7 @@
     <Content Include="Scripts\fastclick\bower.json" />
     <Content Include="Scripts\fastclick\LICENSE" />
     <Content Include="Scripts\fastclick\README.md" />
+    <None Include="Properties\PublishProfiles\Sinal - Darwin.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\fastclick\lib\fastclick.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
