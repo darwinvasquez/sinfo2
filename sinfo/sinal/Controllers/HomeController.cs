@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace sinal.Controllers
 {
+    
     public class HomeController : Controller
     {
         public ActionResult Index()
