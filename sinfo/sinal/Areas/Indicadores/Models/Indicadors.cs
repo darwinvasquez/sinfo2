@@ -125,6 +125,11 @@ namespace sinal.Areas.Indicadores.Models
         [ForeignKey("CategoriaDerechoId")]
         public virtual CategoriaDerecho CategoriaDerecho { get; set; }
 
+        /// <summary>
+        /// Propiedad de navegacion hacia Indicador variable
+        /// </summary>       
+        public virtual List<Variable> Variable { get; set; }
+
         #endregion
 
     }

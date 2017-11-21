@@ -197,13 +197,10 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Areas\Indicadores\Controllers\CategoriaController.cs" />
-    <Compile Include="Areas\Indicadores\Controllers\IndicadorsController.cs" />
     <Compile Include="Areas\Indicadores\IndicadoresAreaRegistration.cs" />
     <Compile Include="Areas\Indicadores\Models\CategoriaDerecho.cs" />
     <Compile Include="Areas\Indicadores\Models\ContextIndicador.cs" />
     <Compile Include="Areas\Indicadores\Models\Indicadors.cs" />
-    <Compile Include="Areas\Indicadores\Models\IndicadorVariable.cs" />
     <Compile Include="Areas\Indicadores\Models\Variable.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -2450,16 +2447,6 @@
     <Content Include="Areas\Indicadores\Views\web.config" />
     <Content Include="Areas\Indicadores\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Indicadores\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Indicadores\Views\Categoria\Create.cshtml" />
-    <Content Include="Areas\Indicadores\Views\Categoria\Delete.cshtml" />
-    <Content Include="Areas\Indicadores\Views\Categoria\Details.cshtml" />
-    <Content Include="Areas\Indicadores\Views\Categoria\Edit.cshtml" />
-    <Content Include="Areas\Indicadores\Views\Categoria\Index.cshtml" />
-    <Content Include="Areas\Indicadores\Views\Indicadors\Create.cshtml" />
-    <Content Include="Areas\Indicadores\Views\Indicadors\Delete.cshtml" />
-    <Content Include="Areas\Indicadores\Views\Indicadors\Details.cshtml" />
-    <Content Include="Areas\Indicadores\Views\Indicadors\Edit.cshtml" />
-    <Content Include="Areas\Indicadores\Views\Indicadors\Index.cshtml" />
     <Content Include="Content\datatables.net-bs\.bower.json" />
     <Content Include="Content\datatables.net-bs\bower.json" />
     <Content Include="Content\datatables.net-bs\Readme.md" />
@@ -3791,6 +3778,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Indicadores\Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

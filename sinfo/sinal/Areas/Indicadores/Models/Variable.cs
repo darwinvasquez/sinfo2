@@ -38,7 +38,7 @@ namespace sinal.Areas.Indicadores.Models
         /// <summary>
         /// Propiedad de navegacion hacia Indicador variable
         /// </summary>       
-        public virtual List<IndicadorVariable> IndicadorVariable { get; set; }
+        public virtual List<Indicadors> Indicadors { get; set; }
 
         #endregion
     }
