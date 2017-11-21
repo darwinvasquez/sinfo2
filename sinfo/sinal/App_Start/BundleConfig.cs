@@ -73,6 +73,10 @@ namespace sinal
             bundles.Add(new StyleBundle("~/Content/blueCSS").Include(
                       "~/Content/iCheck/square/blue.css"));
 
+            // DataTables-- >
+            bundles.Add(new StyleBundle("~/Content/bootstrapdataTablesCSS").Include(
+                      "~/Content/datatables.net-bs/css/dataTables.bootstrap.min.css"));
+
             /************** PLANTILLA JS ************/
 
             //jquery.JS
@@ -154,6 +158,14 @@ namespace sinal
             //icheck.js
             bundles.Add(new ScriptBundle("~/bundles/icheckJS").Include(
                       "~/Content/iCheck/icheck.min.js"));
+
+            //datatables.net.js
+            bundles.Add(new ScriptBundle("~/bundles/jquerydataTablesJS").Include(
+                      "~/Scripts/datatables.net/js/jquery.dataTables.min.js"));
+
+            //datatables.net-bs.js
+            bundles.Add(new ScriptBundle("~/bundles/dataTablesbootstrapJS").Include(
+                      "~/Content/datatables.net-bs/js/dataTables.bootstrap.min.js"));
 
 
 
