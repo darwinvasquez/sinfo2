@@ -200,7 +200,7 @@
     <Compile Include="Areas\Indicadores\IndicadoresAreaRegistration.cs" />
     <Compile Include="Areas\Indicadores\Models\CategoriaDerecho.cs" />
     <Compile Include="Areas\Indicadores\Models\ContextIndicador.cs" />
-    <Compile Include="Areas\Indicadores\Models\Indicadors.cs" />
+    <Compile Include="Areas\Indicadores\Models\Indicador.cs" />
     <Compile Include="Areas\Indicadores\Models\Variable.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />

@@ -12,8 +12,8 @@ namespace sinal.Areas.Indicadores.Models
             : base("DefaultConnection")
         {
         }
-        public virtual DbSet<CategoriaDerecho> CategoriaDerecho { get; set; }
-        public virtual DbSet<Indicadors> Indicador { get; set; }
-        public virtual DbSet<Variable> Variable { get; set; }       
+        public  DbSet<CategoriaDerecho> CategoriaDerecho { get; set; }
+        public  DbSet<Indicador> Indicador { get; set; }
+        public  DbSet<Variable> Variable { get; set; }       
     }
 }

@@ -16,14 +16,14 @@ namespace sinal.Areas.Indicadores.Models
         /// <summary>
         /// Autoincromento categoria derecho
         /// </summary>
-        [Column("CategoriaDerechoId", Order =1), Key]
+        [Column("CategoriaDerechoId"), Key]
         public int CategoriaDerechoId { get; set; }
 
         /// <summary>
         /// Descripcion de la categoria
         /// </summary>
         [Required]
-        [Column("Descripcion", Order = 2)]
+        [Column("Descripcion")]
         [StringLength(255, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
         public string Descripcion { get; set; }
 
@@ -31,7 +31,7 @@ namespace sinal.Areas.Indicadores.Models
         /// Estado de la categoria
         /// </summary>
         [Required]
-        [Column("Vigente", Order =3)]
+        [Column("Vigente")]
         public bool Vigente { get; set; }
 
         #region Propiedades de navegación
@@ -39,7 +39,8 @@ namespace sinal.Areas.Indicadores.Models
         /// <summary>
         /// Propiedad de navegación hacia el indicador
         /// </summary>
-        public virtual List<Indicadors> Indicador { get; set; }
+        //
+        public List<Indicador> Indicador { get; set; }
 
         #endregion
     }
