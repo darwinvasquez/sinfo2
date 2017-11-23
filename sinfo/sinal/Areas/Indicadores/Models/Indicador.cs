@@ -45,7 +45,7 @@ namespace sinal.Areas.Indicadores.Models
         ///// </summary>
         [Column("Objetivo", Order = 5)]
         [Required]
-        [StringLength(100, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 100")]
+        [StringLength(255, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
         public string Objetivo { get; set; }
 
         ///// <summary>
@@ -53,7 +53,7 @@ namespace sinal.Areas.Indicadores.Models
         ///// </summary>
         [Column("CicloVital", Order = 6)]
         [Required]
-        [StringLength(100, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 100")]
+        [StringLength(255, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
         public string CicloVital { get; set; }
 
         ///// <summary>
@@ -61,7 +61,7 @@ namespace sinal.Areas.Indicadores.Models
         ///// </summary>
         [Column("Definicion", Order = 7)]
         [Required]
-        [StringLength(100, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 100")]
+        [StringLength(4000, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 4000")]
         public string Definicion { get; set; }
 
         ///// <summary>
@@ -69,14 +69,14 @@ namespace sinal.Areas.Indicadores.Models
         ///// </summary>
         [Column("Interpretacion", Order = 8)]
         [Required]
-        [StringLength(100, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 100")]
+        [StringLength(4000, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 4000")]
         public string Interpretacion { get; set; }
 
         ///// <summary>
         ///// Informacion adicional del indicador
         ///// </summary>
         [Column("InformacionAdicional", Order = 9)]
-        [StringLength(500, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 500")]
+        [StringLength(4000, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 4000")]
         public string InformacionAdicional { get; set; }
 
         ///// <summary>
@@ -84,7 +84,7 @@ namespace sinal.Areas.Indicadores.Models
         ///// </summary>
         [Column("Formula", Order = 10)]
         [Required]
-        [StringLength(255, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
+        [StringLength(500, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 500")]
         public string Formula { get; set; }
 
         ///// <summary>
@@ -100,7 +100,7 @@ namespace sinal.Areas.Indicadores.Models
         ///// </summary>
         [Column("Fuente", Order = 12)]
         [Required]
-        [StringLength(200, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 200")]
+        [StringLength(255, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
         public string Fuente { get; set; }
 
         ///// <summary>
@@ -108,7 +108,7 @@ namespace sinal.Areas.Indicadores.Models
         ///// </summary>
         [Column("Origen", Order = 13)]
         [Required]
-        [StringLength(6, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 6")]
+        [StringLength(10, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 6")]
         public string Origen { get; set; }
 
         ///// <summary>
@@ -128,7 +128,7 @@ namespace sinal.Areas.Indicadores.Models
         /// <summary>
         /// Propiedad de navegacion hacia Indicador variable
         /// </summary>       
-        public virtual List<Variable> Variable { get; set; }
+        public virtual ICollection<Variable> Variable { get; set; }
 
         #endregion
 

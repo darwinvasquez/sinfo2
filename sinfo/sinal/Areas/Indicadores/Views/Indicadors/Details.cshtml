@@ -1,0 +1,122 @@
+﻿@model sinal.Areas.Indicadores.Models.Indicador
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Indicador</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoriaDerecho.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoriaDerecho.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Objetivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Objetivo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CicloVital)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CicloVital)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Definicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Definicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Interpretacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Interpretacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InformacionAdicional)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InformacionAdicional)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Formula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Formula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnidadMedida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnidadMedida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fuente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fuente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Origen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Origen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vigente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vigente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IndicadorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

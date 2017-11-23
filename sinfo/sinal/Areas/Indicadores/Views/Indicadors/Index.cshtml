@@ -1,0 +1,105 @@
+﻿@model IEnumerable<sinal.Areas.Indicadores.Models.Indicador>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoriaDerecho.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Objetivo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CicloVital)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Definicion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Interpretacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InformacionAdicional)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Formula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnidadMedida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fuente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Origen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vigente)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoriaDerecho.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Objetivo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CicloVital)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Definicion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Interpretacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InformacionAdicional)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Formula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnidadMedida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fuente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Origen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vigente)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IndicadorId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IndicadorId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IndicadorId })
+        </td>
+    </tr>
+}
+
+</table>

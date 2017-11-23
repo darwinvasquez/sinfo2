@@ -197,6 +197,11 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Indicadores\Controllers\CategoriaController.cs" />
+    <Compile Include="Areas\Indicadores\Controllers\IndicadorsController.cs" />
+    <Compile Include="Areas\Indicadores\Controllers\InstitucionsController.cs" />
+    <Compile Include="Areas\Indicadores\Controllers\ValorVariablesController.cs" />
+    <Compile Include="Areas\Indicadores\Controllers\VariablesController.cs" />
     <Compile Include="Areas\Indicadores\IndicadoresAreaRegistration.cs" />
     <Compile Include="Areas\Indicadores\Models\CategoriaDerecho.cs" />
     <Compile Include="Areas\Indicadores\Models\ContextIndicador.cs" />
@@ -2456,6 +2461,31 @@
     <Content Include="Content\bootstrap-datepicker\build\build3.less" />
     <Content Include="Content\bootstrap-datepicker\build\build_standalone.less" />
     <Content Include="Content\bootstrap-datepicker\build\build_standalone3.less" />
+    <Content Include="Areas\Indicadores\Views\Categoria\Create.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Categoria\Delete.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Categoria\Details.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Categoria\Edit.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Categoria\Index.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Variables\Create.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Variables\Delete.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Variables\Details.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Variables\Edit.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Variables\Index.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Institucions\Create.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Institucions\Delete.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Institucions\Details.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Institucions\Edit.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Institucions\Index.cshtml" />
+    <Content Include="Areas\Indicadores\Views\ValorVariables\Create.cshtml" />
+    <Content Include="Areas\Indicadores\Views\ValorVariables\Delete.cshtml" />
+    <Content Include="Areas\Indicadores\Views\ValorVariables\Details.cshtml" />
+    <Content Include="Areas\Indicadores\Views\ValorVariables\Edit.cshtml" />
+    <Content Include="Areas\Indicadores\Views\ValorVariables\Index.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Indicadors\Create.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Indicadors\Delete.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Indicadors\Details.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Indicadors\Edit.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Indicadors\Index.cshtml" />
     <None Include="Properties\PublishProfiles\ftp - sinal.pubxml" />
     <None Include="Properties\PublishProfiles\Sinal - Darwin.pubxml" />
     <Content Include="Scripts\datatables.net\.bower.json" />
@@ -3780,7 +3810,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Indicadores\Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
