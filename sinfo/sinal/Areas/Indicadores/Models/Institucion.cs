@@ -8,40 +8,35 @@ using System.Web;
 namespace sinal.Areas.Indicadores.Models
 {
     /// <summary>
-    /// Tabla que permite registrar las variables
+    /// Tabla que permite almacenar las instituciones
     /// </summary>
-    [Table("Variable")]
-    public class Variable
+    [Table("Institucion")]
+    public class Institucion
     {
         /// <summary>
-        /// Autoincromento Variable
+        /// Autoincromento institucion
         /// </summary>
-        [Column("VariableId", Order = 1), Key]
-        public int IndicadorId { get; set; }
-        
+        [Column("InstitucionId"), Key]
+        public int InstitucionId { get; set; }
+
         /// <summary>
-        /// Nombre variable
+        /// Nombre institucion
         /// </summary>
-        [Column("Nombre", Order = 2)]
         [Required]
+        [Column("Nombre")]
         [StringLength(255, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
         public string Nombre { get; set; }
 
         /// <summary>
-        /// Estado de variable
+        /// Estado institucion
         /// </summary>
         [Required]
-        [Column("Vigente", Order = 3)]
+        [Column("Vigente")]
         public bool Vigente { get; set; }
 
         #region Propiedades de navegación
         /// <summary>
-        /// Propiedad de navegacion hacia Indicador variable
-        /// </summary>       
-        public virtual List<Indicador> Indicador { get; set; }
-
-        /// <summary>
-        /// Propiedad de navegacion hacia ValorVariable
+        /// Propiedad de navegacion hacia valor variable
         /// </summary>       
         public virtual List<ValorVariable> ValorVariable { get; set; }
 

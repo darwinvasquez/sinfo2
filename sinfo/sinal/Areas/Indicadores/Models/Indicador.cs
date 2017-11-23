@@ -123,7 +123,7 @@ namespace sinal.Areas.Indicadores.Models
         /// Propiedad de navegacion hacia la categoria de derecho del indicador
         /// </summary>
         [ForeignKey("CategoriaDerechoId")]
-        public CategoriaDerecho CategoriaDerecho { get; set; }
+        public virtual CategoriaDerecho CategoriaDerecho { get; set; }
 
         /// <summary>
         /// Propiedad de navegacion hacia Indicador variable
