@@ -17,30 +17,36 @@ namespace sinal.Areas.Indicadores.Models
         /// Autoincromento Valor Variable
         /// </summary>
         [Column("ValorVariableId"), Key]
+        [Display(Name = "Código")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ValorVariableId { get; set; }
 
         /// <summary>
         /// LLave foranea de la tabla variable
         /// </summary>
         [Column("VariableId")]
+        [Display(Name = "Variable")]
         public int VariableId { get; set; }
 
         /// <summary>
         /// Fecha registro variable
         /// </summary>
         [Column("Fecha")]
+        [Display(Name = "Fecha")]
         public DateTime Fecha { get; set; }
 
         /// <summary>
         /// Valor variable
         /// </summary>
         [Column("Valor")]
+        [Display(Name = "Valor")]
         public int Valor { get; set; }
 
         /// <summary>
         /// LLave foranea de la tabla institución
         /// </summary>
         [Column("InstitucionId")]
+        [Display(Name = "Institución")]
         public int InstitucionId { get; set; }
 
         /// <summary>
@@ -48,17 +54,8 @@ namespace sinal.Areas.Indicadores.Models
         /// </summary>
         [Required]
         [Column("Vigente")]
+        [Display(Name = "Vigente")]
         public bool Vigente { get; set; }
-
-
-        /// <summary>
-        /// Nombre institucion
-        /// </summary>
-        [Required]
-        [Column("Nombre")]
-        [StringLength(255, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
-        public string Nombre { get; set; }
-
 
         #region Propiedades de navegación
 

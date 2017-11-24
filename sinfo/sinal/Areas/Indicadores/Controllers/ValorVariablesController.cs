@@ -40,7 +40,7 @@ namespace sinal.Areas.Indicadores.Controllers
         public ActionResult Create()
         {
             ViewBag.InstitucionId = new SelectList(db.Institucion, "InstitucionId", "Nombre");
-            ViewBag.VariableId = new SelectList(db.Variable, "IndicadorId", "Nombre");
+            ViewBag.VariableId = new SelectList(db.Variable, "VariableId", "Nombre");
             return View();
         }
 
@@ -49,7 +49,7 @@ namespace sinal.Areas.Indicadores.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ValorVariableId,VariableId,Fecha,Valor,InstitucionId,Vigente,Nombre")] ValorVariable valorVariable)
+        public ActionResult Create([Bind(Include = "ValorVariableId,VariableId,Fecha,Valor,InstitucionId,Vigente")] ValorVariable valorVariable)
         {
             if (ModelState.IsValid)
             {
@@ -59,7 +59,7 @@ namespace sinal.Areas.Indicadores.Controllers
             }
 
             ViewBag.InstitucionId = new SelectList(db.Institucion, "InstitucionId", "Nombre", valorVariable.InstitucionId);
-            ViewBag.VariableId = new SelectList(db.Variable, "IndicadorId", "Nombre", valorVariable.VariableId);
+            ViewBag.VariableId = new SelectList(db.Variable, "VariableId", "Nombre", valorVariable.VariableId);
             return View(valorVariable);
         }
 
@@ -76,7 +76,7 @@ namespace sinal.Areas.Indicadores.Controllers
                 return HttpNotFound();
             }
             ViewBag.InstitucionId = new SelectList(db.Institucion, "InstitucionId", "Nombre", valorVariable.InstitucionId);
-            ViewBag.VariableId = new SelectList(db.Variable, "IndicadorId", "Nombre", valorVariable.VariableId);
+            ViewBag.VariableId = new SelectList(db.Variable, "VariableId", "Nombre", valorVariable.VariableId);
             return View(valorVariable);
         }
 
@@ -85,7 +85,7 @@ namespace sinal.Areas.Indicadores.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ValorVariableId,VariableId,Fecha,Valor,InstitucionId,Vigente,Nombre")] ValorVariable valorVariable)
+        public ActionResult Edit([Bind(Include = "ValorVariableId,VariableId,Fecha,Valor,InstitucionId,Vigente")] ValorVariable valorVariable)
         {
             if (ModelState.IsValid)
             {
@@ -94,7 +94,7 @@ namespace sinal.Areas.Indicadores.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.InstitucionId = new SelectList(db.Institucion, "InstitucionId", "Nombre", valorVariable.InstitucionId);
-            ViewBag.VariableId = new SelectList(db.Variable, "IndicadorId", "Nombre", valorVariable.VariableId);
+            ViewBag.VariableId = new SelectList(db.Variable, "VariableId", "Nombre", valorVariable.VariableId);
             return View(valorVariable);
         }
 

@@ -13,16 +13,25 @@ namespace sinal.Areas.Indicadores.Models
     [Table("Indicador")]
     public class Indicador
     {
+        public Indicador()
+        {
+            this.Variable = new HashSet<Variable>();
+        }
+
+
         /// <summary>
         /// Autoincromento Indicador
         /// </summary>
         [Column("IndicadorId", Order =1), Key]
+        [Display(Name = "Código")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IndicadorId { get; set; }
 
         /// <summary>
         /// Categoria del derecho asociado al indicador
         /// </summary>        
         [Column("CategoriaDerechoId", Order =2)]
+        [Display(Name = "Categoría")]
         public int CategoriaDerechoId { get; set; }
 
         ///// <summary>
@@ -30,6 +39,7 @@ namespace sinal.Areas.Indicadores.Models
         ///// </summary>        
         [Column("Numero", Order = 3)]
         [Required]
+        [Display(Name = "Número")]
         public int Numero { get; set; }
 
         ///// <summary>
@@ -38,6 +48,7 @@ namespace sinal.Areas.Indicadores.Models
         [Column("Nombre", Order = 4)]
         [Required]
         [StringLength(255, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
+        [Display(Name = "Nombre")]
         public string Nombre { get; set; }
 
         ///// <summary>
@@ -46,6 +57,7 @@ namespace sinal.Areas.Indicadores.Models
         [Column("Objetivo", Order = 5)]
         [Required]
         [StringLength(255, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
+        [Display(Name = "Objectivo")]
         public string Objetivo { get; set; }
 
         ///// <summary>
@@ -54,6 +66,7 @@ namespace sinal.Areas.Indicadores.Models
         [Column("CicloVital", Order = 6)]
         [Required]
         [StringLength(255, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
+        [Display(Name = "Ciclo Vital")]
         public string CicloVital { get; set; }
 
         ///// <summary>
@@ -62,6 +75,7 @@ namespace sinal.Areas.Indicadores.Models
         [Column("Definicion", Order = 7)]
         [Required]
         [StringLength(4000, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 4000")]
+        [Display(Name = "Definición")]
         public string Definicion { get; set; }
 
         ///// <summary>
@@ -70,6 +84,7 @@ namespace sinal.Areas.Indicadores.Models
         [Column("Interpretacion", Order = 8)]
         [Required]
         [StringLength(4000, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 4000")]
+        [Display(Name = "Interpretación")]
         public string Interpretacion { get; set; }
 
         ///// <summary>
@@ -77,6 +92,7 @@ namespace sinal.Areas.Indicadores.Models
         ///// </summary>
         [Column("InformacionAdicional", Order = 9)]
         [StringLength(4000, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 4000")]
+        [Display(Name = "Información Adicional")]
         public string InformacionAdicional { get; set; }
 
         ///// <summary>
@@ -85,6 +101,7 @@ namespace sinal.Areas.Indicadores.Models
         [Column("Formula", Order = 10)]
         [Required]
         [StringLength(500, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 500")]
+        [Display(Name = "Fórmula")]
         public string Formula { get; set; }
 
         ///// <summary>
@@ -93,6 +110,7 @@ namespace sinal.Areas.Indicadores.Models
         [Column("UnidadMedida", Order = 11)]
         [Required]
         [StringLength(255, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
+        [Display(Name = "Unidad Medida")]
         public string UnidadMedida { get; set; }
 
         ///// <summary>
@@ -101,6 +119,7 @@ namespace sinal.Areas.Indicadores.Models
         [Column("Fuente", Order = 12)]
         [Required]
         [StringLength(255, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
+        [Display(Name = "Fuente")]
         public string Fuente { get; set; }
 
         ///// <summary>
@@ -109,6 +128,7 @@ namespace sinal.Areas.Indicadores.Models
         [Column("Origen", Order = 13)]
         [Required]
         [StringLength(10, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 6")]
+        [Display(Name = "Origen")]
         public string Origen { get; set; }
 
         ///// <summary>
@@ -116,6 +136,7 @@ namespace sinal.Areas.Indicadores.Models
         ///// </summary>
         [Required]
         [Column("Vigente", Order = 14)]
+        [Display(Name = "Vigente")]
         public bool Vigente { get; set; }
 
         #region Propiedades de navegación

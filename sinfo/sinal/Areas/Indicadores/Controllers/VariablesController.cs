@@ -47,18 +47,13 @@ namespace sinal.Areas.Indicadores.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IndicadorId,Nombre,Vigente")] Variable variable)
+        public ActionResult Create([Bind(Include = "VariableId,Nombre,Vigente,IndicadorId")] Variable variable)
         {
-            //Indicador indicador = db.Indicador.Find(variable.IndicadorId);
-
-           // Indicador indicador = new Indicador { IndicadorId = variable.IndicadorId };
-
-            variable.Indicador.Add(new Indicador { IndicadorId = variable.IndicadorId });
-                        
-
             if (ModelState.IsValid)
             {
+                Indicador indicador = db.Indicador.Find(variable.IndicadorId);
                 db.Variable.Add(variable);
+                variable.Indicador.Add(indicador);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -86,7 +81,7 @@ namespace sinal.Areas.Indicadores.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IndicadorId,Nombre,Vigente")] Variable variable)
+        public ActionResult Edit([Bind(Include = "VariableId,Nombre,Vigente")] Variable variable)
         {
             if (ModelState.IsValid)
             {

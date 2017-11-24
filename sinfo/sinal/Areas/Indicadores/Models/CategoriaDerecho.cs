@@ -17,6 +17,8 @@ namespace sinal.Areas.Indicadores.Models
         /// Autoincromento categoria derecho
         /// </summary>
         [Column("CategoriaDerechoId"), Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(Name = "Código")]
         public int CategoriaDerechoId { get; set; }
 
         /// <summary>
@@ -25,6 +27,7 @@ namespace sinal.Areas.Indicadores.Models
         [Required]
         [Column("Descripcion")]
         [StringLength(255, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
+        [Display(Name = "Descripción")]
         public string Descripcion { get; set; }
 
         /// <summary>
@@ -32,6 +35,7 @@ namespace sinal.Areas.Indicadores.Models
         /// </summary>
         [Required]
         [Column("Vigente")]
+        [Display(Name = "Vigente")]
         public bool Vigente { get; set; }
 
         #region Propiedades de navegación
@@ -40,7 +44,7 @@ namespace sinal.Areas.Indicadores.Models
         /// Propiedad de navegación hacia el indicador
         /// </summary>
         //
-        public virtual List<Indicador> Indicador { get; set; }
+        public virtual ICollection<Indicador> Indicador { get; set; }
 
         #endregion
     }

@@ -17,6 +17,8 @@ namespace sinal.Areas.Indicadores.Models
         /// Autoincromento institucion
         /// </summary>
         [Column("InstitucionId"), Key]
+        [Display(Name = "Código")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int InstitucionId { get; set; }
 
         /// <summary>
@@ -25,6 +27,7 @@ namespace sinal.Areas.Indicadores.Models
         [Required]
         [Column("Nombre")]
         [StringLength(255, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
+        [Display(Name = "Nombre")]
         public string Nombre { get; set; }
 
         /// <summary>
@@ -32,13 +35,14 @@ namespace sinal.Areas.Indicadores.Models
         /// </summary>
         [Required]
         [Column("Vigente")]
+        [Display(Name = "Vigente")]
         public bool Vigente { get; set; }
 
         #region Propiedades de navegación
         /// <summary>
         /// Propiedad de navegacion hacia valor variable
         /// </summary>       
-        public virtual List<ValorVariable> ValorVariable { get; set; }
+        public virtual ICollection<ValorVariable> ValorVariable { get; set; }
 
         #endregion
     }
