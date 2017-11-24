@@ -71,23 +71,7 @@ namespace sinal.Areas.Indicadores.Models
         [ForeignKey("InstitucionId")]
         public virtual Institucion Institucion { get; set; }
 
-        #endregion
-
-        #region Funciones calculadas
-        /// <summary>
-        /// función que calcula la Tasa de mortalidad en menores de un año - Mortalidad Infantil.
-        /// </summary>
-        public int CalculoIndicadorUno()
-        {
-            return 0;
-        }
-
-
-
-
-
-        #endregion
-
+        #endregion     
 
     }
 }

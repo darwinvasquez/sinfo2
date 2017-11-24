@@ -109,6 +109,25 @@ namespace sinal.Areas.Indicadores.Controllers
             return View(indicador);
         }
 
+
+        // GET: Indicadores/Indicadors/Details/5
+        public ActionResult InfoIndicador(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Indicador indicador = db.Indicador.Find(id);
+            if (indicador == null)
+            {
+                return HttpNotFound();
+            }           
+
+
+            return View(indicador);
+        }
+
+
         // POST: Indicadores/Indicadors/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

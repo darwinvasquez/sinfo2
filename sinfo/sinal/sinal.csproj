@@ -203,6 +203,7 @@
     <Compile Include="Areas\Indicadores\Controllers\ValorVariablesController.cs" />
     <Compile Include="Areas\Indicadores\Controllers\VariablesController.cs" />
     <Compile Include="Areas\Indicadores\IndicadoresAreaRegistration.cs" />
+    <Compile Include="Areas\Indicadores\Models\CalculoIndicador.cs" />
     <Compile Include="Areas\Indicadores\Models\CategoriaDerecho.cs" />
     <Compile Include="Areas\Indicadores\Models\ContextIndicador.cs" />
     <Compile Include="Areas\Indicadores\Models\Indicador.cs" />
