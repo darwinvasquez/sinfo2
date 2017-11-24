@@ -17,8 +17,6 @@ namespace sinal.Areas.Indicadores.Models
         {
             this.Variable = new HashSet<Variable>();
         }
-
-
         /// <summary>
         /// Autoincromento Indicador
         /// </summary>
