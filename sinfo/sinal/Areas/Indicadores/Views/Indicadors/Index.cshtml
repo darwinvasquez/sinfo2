@@ -12,6 +12,8 @@
 <table class="table">
     <tr>
         <th>
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.IndicadorId)
         </th>
         <th>
@@ -58,6 +60,9 @@
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.ActionLink("Info", "InfoIndicador", new { id = item.IndicadorId }) |
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.IndicadorId)
         </td>

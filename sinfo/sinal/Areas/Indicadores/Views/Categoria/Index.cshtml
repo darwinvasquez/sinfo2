@@ -36,10 +36,40 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.CategoriaDerechoId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CategoriaDerechoId }) |
+            <a href="#" class="btn btn-default btnDetails" data-value="@item.CategoriaDerechoId">Details</a>
+            @*@Html.ActionLink("Details", "Details", new { id=item.CategoriaDerechoId }) |*@
             @Html.ActionLink("Delete", "Delete", new { id=item.CategoriaDerechoId })
         </td>
     </tr>
 }
 
 </table>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">            
+            <div class="modal-body">
+                <div id="conteudoModal"></div>
+            </div>            
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".btnDetails").click(function () {
+                var id = $(this).data("value");
+                $("#conteudoModal").load("/Indicadores/Categoria/Details/" + id,
+                    function () {
+                        $('#myModal').modal("show");
+                    }
+                );
+               
+
+            });
+
+        });
+    </script>
+}

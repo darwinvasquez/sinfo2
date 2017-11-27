@@ -32,7 +32,7 @@ namespace sinal.Areas.Indicadores.Controllers
             {
                 return HttpNotFound();
             }
-            return View(categoriaDerecho);
+            return PartialView(categoriaDerecho);
         }
 
         // GET: Indicadores/Categoria/Create

@@ -208,6 +208,8 @@
     <Compile Include="Areas\Indicadores\Models\ContextIndicador.cs" />
     <Compile Include="Areas\Indicadores\Models\Indicador.cs" />
     <Compile Include="Areas\Indicadores\Models\Institucion.cs" />
+    <Compile Include="Areas\Indicadores\Models\Repositorios\CategoriaDerechoRepositorio.cs" />
+    <Compile Include="Areas\Indicadores\Models\Repositorios\Repositorio.cs" />
     <Compile Include="Areas\Indicadores\Models\ValorVariable.cs" />
     <Compile Include="Areas\Indicadores\Models\Variable.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -2487,6 +2489,7 @@
     <Content Include="Areas\Indicadores\Views\Variables\Details.cshtml" />
     <Content Include="Areas\Indicadores\Views\Variables\Edit.cshtml" />
     <Content Include="Areas\Indicadores\Views\Variables\Index.cshtml" />
+    <Content Include="Areas\Indicadores\Views\Indicadors\InfoIndicador.cshtml" />
     <None Include="Properties\PublishProfiles\ftp - sinal.pubxml" />
     <None Include="Properties\PublishProfiles\Sinal - Darwin.pubxml" />
     <Content Include="Scripts\datatables.net\.bower.json" />

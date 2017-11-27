@@ -161,7 +161,8 @@ namespace sinal
 
             //datatables.net.js
             bundles.Add(new ScriptBundle("~/bundles/jquerydataTablesJS").Include(
-                      "~/Scripts/datatables.net/js/jquery.dataTables.min.js"));
+                      "~/Scripts/datatables.net/js/jquery.dataTables.min.js",
+                      "~/Content/datatables.net-bs/js/dataTables.bootstrap.min.js"));
 
             //datatables.net-bs.js
             bundles.Add(new ScriptBundle("~/bundles/dataTablesbootstrapJS").Include(

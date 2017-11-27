@@ -111,18 +111,17 @@ namespace sinal.Areas.Indicadores.Controllers
 
 
         // GET: Indicadores/Indicadors/Details/5
-        public ActionResult InfoIndicador(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
+        public ActionResult InfoIndicador(int id)
+        {           
             Indicador indicador = db.Indicador.Find(id);
             if (indicador == null)
             {
                 return HttpNotFound();
-            }           
+            }
 
+            CalculoIndicador calculoindicador = new CalculoIndicador();
+            ViewBag.CALCULO = calculoindicador.resultadoIndicadorPorId(id);
+            
 
             return View(indicador);
         }
