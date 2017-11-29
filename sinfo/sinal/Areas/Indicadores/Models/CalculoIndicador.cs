@@ -52,6 +52,7 @@ namespace sinal.Areas.Indicadores.Models
             {
                 return 0;
             }
+
             return result;          
         }
 
@@ -65,7 +66,7 @@ namespace sinal.Areas.Indicadores.Models
                     var anoInd1 = db.ValorVariable.Where(x => x.Variable.VariableId == 3 || x.Variable.VariableId == 4).GroupBy(s => new { s.Fecha.Year }).Select(x => new { id = x.Key, ano = x.Key.Year }).OrderByDescending(x => x.ano);
                     foreach (var item in anoInd1)
                     {
-                        ano.Add(new SelectListItem { Text = Convert.ToString(item.ano), Value = Convert.ToString(calculoIndicadorUno(item.ano)) });
+                        ano.Add(new SelectListItem { Text = Convert.ToString(item.ano), Value = Convert.ToString(calculoIndicadorUno(item.ano)).Replace(",",".") });
                     } 
                     break;
 
