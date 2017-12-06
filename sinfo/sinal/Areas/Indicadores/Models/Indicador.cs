@@ -149,6 +149,11 @@ namespace sinal.Areas.Indicadores.Models
         /// </summary>       
         public virtual ICollection<Variable> Variable { get; set; }
 
+        /// <summary>
+        /// Propiedad de navegacion hacia Indicador variable
+        /// </summary>       
+        public virtual ICollection<Analisis> Analisis { get; set; }
+
         #endregion
 
     }

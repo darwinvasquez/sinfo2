@@ -65,6 +65,36 @@
             window.attachEvent('onresize', resizeHandler);
         }
     }
+
+    google.charts.setOnLoadCallback(drawChart2);
+
+    function drawChart2() {
+        var data2 = google.visualization.arrayToDataTable([
+               ['Año', 'Cantidad'],
+             @foreach (var i in ViewBag.CALCULO)
+            {
+                @:['@Html.Raw(i.Text)', @i.Value],
+            }
+        ]);
+        var options2 = {             
+            height: 300,
+            width: '100%'
+        };
+        var chart2 = new google.visualization.LineChart(document.getElementById('BarChart2'));
+
+        chart2.draw(data2, options2);
+
+        function resizeHandler() {
+            chart2.draw(data2, options2);
+        }
+        if (window.addEventListener) {
+            window.addEventListener('resize', resizeHandler, false);
+        }
+        else if (window.attachEvent) {
+            window.attachEvent('onresize', resizeHandler);
+        }
+    }
+
 </script>
 
 
@@ -104,7 +134,68 @@
 <section class="content">
     <div class="row">
         <div class="col-md-6">
-            <div class="box box-success">
+            <!-- Custom Tabs -->
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab_1" data-toggle="tab">Interpretación</a></li>
+                    <li><a href="#tab_2" data-toggle="tab">Definición</a></li>
+                    <li><a href="#tab_3" data-toggle="tab">Información Adicional</a></li> 
+                    <li><a href="#tab_4" data-toggle="tab">Otros Aspectos</a></li>                   
+                    <li class="pull-right"><a href="#" class="text-muted"><i class="fa fa-gear"></i></a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab_1">
+                        <p class="text-justify">@Model.Interpretacion</p>                       
+                    </div>
+                    <!-- /.tab-pane -->
+                    <div class="tab-pane" id="tab_2">
+                       <p class="text-justify">@Model.Definicion</p>
+                    </div>
+                    <!-- /.tab-pane -->
+                    <div class="tab-pane" id="tab_3">
+                        <p class="text-justify">@Model.InformacionAdicional</p>
+                    </div>
+                    <!-- /.tab-pane -->
+                    <!-- /.tab-pane -->
+                    <div class="tab-pane" id="tab_4">
+                        <ul>
+                            <li>Derecho: @Model.CategoriaDerecho.Descripcion</li>
+                            <li>Objetivo: @Model.Objetivo</li>
+                            <li>Ciclo Vital: @Model.CicloVital</li>
+                        </ul>                     
+                    </div>
+                    <!-- /.tab-pane -->
+                </div>
+                <!-- /.tab-content -->
+            </div>
+            <!-- nav-tabs-custom -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-6">
+            <!-- Default box -->
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Variables</h3>
+                    <div class="box-tools pull-right">                        
+                    </div>
+                </div>
+                <div class="box-body">
+                    <ul>
+                        @foreach (var item in Model.Variable)
+                        {
+                            <li>@item.Nombre</li>
+                        }
+                    </ul>                  
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="box box-info">
                 <div class="box-header">
                     <h3 class="box-title">Históricos</h3>
                 </div>
@@ -178,7 +269,7 @@
             <!-- Default box -->
             <div class="box">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Variable</h3>
+                    <h3 class="box-title">Lineas</h3>
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                                 title="Collapse">
@@ -190,7 +281,7 @@
                     </div>
                 </div>
                 <div class="box-body">
-                 
+                    <div id="BarChart2"></div>
                 </div>
                 <!-- /.box-body -->
                
@@ -243,7 +334,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="box box-success">
+                <div class="box box-info">
                     <div class="box-header with-border">
                         <h3 class="box-title">@ite.Nombre</h3>                       
                     </div>

@@ -34,7 +34,6 @@ namespace sinal.Areas.Indicadores.Models
         public virtual DbSet<ValorVariable> ValorVariable { get; set; }
         public virtual DbSet<Institucion> Institucion { get; set; }
 
-
-
+        public System.Data.Entity.DbSet<sinal.Areas.Indicadores.Models.Analisis> Analisis { get; set; }
     }
 }
