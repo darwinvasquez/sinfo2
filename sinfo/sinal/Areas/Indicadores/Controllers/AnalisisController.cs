@@ -53,7 +53,7 @@ namespace sinal.Areas.Indicadores.Controllers
         {
             analisis.FechaCreacion = DateTime.Now;
             analisis.UsuarioCreacion = User.Identity.Name;
-            analisis.MaquinaCreacion ="";
+            analisis.MaquinaCreacion ="sddsd";
 
             if (ModelState.IsValid)
             {
