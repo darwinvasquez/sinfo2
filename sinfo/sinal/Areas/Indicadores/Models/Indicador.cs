@@ -109,25 +109,7 @@ namespace sinal.Areas.Indicadores.Models
         [Required]
         [StringLength(255, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
         [Display(Name = "Unidad Medida")]
-        public string UnidadMedida { get; set; }
-
-        ///// <summary>
-        ///// Fuente del indicador:
-        ///// </summary>
-        [Column("Fuente", Order = 12)]
-        [Required]
-        [StringLength(255, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
-        [Display(Name = "Fuente")]
-        public string Fuente { get; set; }
-
-        ///// <summary>
-        ///// Origen del indicador: corresponde al unidad que la generar (Nacional o Local)
-        ///// </summary>
-        [Column("Origen", Order = 13)]
-        [Required]
-        [StringLength(10, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 6")]
-        [Display(Name = "Origen")]
-        public string Origen { get; set; }
+        public string UnidadMedida { get; set; }        
 
         ///// <summary>
         ///// Estado del indicador
@@ -136,6 +118,29 @@ namespace sinal.Areas.Indicadores.Models
         [Column("Vigente", Order = 14)]
         [Display(Name = "Vigente")]
         public bool Vigente { get; set; }
+
+        ///// <summary>
+        ///// Usuario crea
+        ///// </summary>
+        [Column("UsuarioCreacion")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
+        [Display(Name = "UsuarioCreacion")]
+        public string UsuarioCreacion { get; set; }
+
+        ///// <summary>
+        ///// Fecha crea
+        ///// </summary>
+        [Column("FechaCreacion")]
+        [Display(Name = "FechaCreacion")]
+        public DateTime FechaCreacion { get; set; }
+
+        ///// <summary>
+        ///// Maquina crea
+        ///// </summary>
+        [Column("MaquinaCreacion")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son {0}")]
+        [Display(Name = "MaquinaCreacion")]
+        public string MaquinaCreacion { get; set; }
 
         #region Propiedades de navegación
         /// <summary>
@@ -150,7 +155,7 @@ namespace sinal.Areas.Indicadores.Models
         public virtual ICollection<Variable> Variable { get; set; }
 
         /// <summary>
-        /// Propiedad de navegacion hacia Indicador variable
+        /// Propiedad de navegacion hacia análisis
         /// </summary>       
         public virtual ICollection<Analisis> Analisis { get; set; }
 

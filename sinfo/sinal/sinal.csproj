@@ -197,13 +197,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Areas\Indicadores\Controllers\AnalisisController.cs" />
     <Compile Include="Areas\Indicadores\Controllers\CategoriaController.cs" />
     <Compile Include="Areas\Indicadores\Controllers\IndicadorsController.cs" />
     <Compile Include="Areas\Indicadores\Controllers\InstitucionsController.cs" />
     <Compile Include="Areas\Indicadores\Controllers\ValorVariablesController.cs" />
     <Compile Include="Areas\Indicadores\Controllers\VariablesController.cs" />
     <Compile Include="Areas\Indicadores\IndicadoresAreaRegistration.cs" />
+    <Compile Include="Areas\Indicadores\Models\Analisis.cs" />
     <Compile Include="Areas\Indicadores\Models\CalculoIndicador.cs" />
     <Compile Include="Areas\Indicadores\Models\CategoriaDerecho.cs" />
     <Compile Include="Areas\Indicadores\Models\ContextIndicador.cs" />
@@ -211,7 +211,6 @@
     <Compile Include="Areas\Indicadores\Models\Institucion.cs" />
     <Compile Include="Areas\Indicadores\Models\Repositorios\CategoriaDerechoRepositorio.cs" />
     <Compile Include="Areas\Indicadores\Models\Repositorios\Repositorio.cs" />
-    <Compile Include="Areas\Indicadores\Models\Analisis.cs" />
     <Compile Include="Areas\Indicadores\Models\ValorVariable.cs" />
     <Compile Include="Areas\Indicadores\Models\Variable.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -220,7 +219,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -2492,8 +2490,6 @@
     <Content Include="Areas\Indicadores\Views\Variables\Edit.cshtml" />
     <Content Include="Areas\Indicadores\Views\Variables\Index.cshtml" />
     <Content Include="Areas\Indicadores\Views\Indicadors\InfoIndicador.cshtml" />
-    <Content Include="Areas\Indicadores\Views\Analisis\Create.cshtml" />
-    <Content Include="Areas\Indicadores\Views\Analisis\Index.cshtml" />
     <None Include="Properties\PublishProfiles\ftp - sinal.pubxml" />
     <None Include="Properties\PublishProfiles\Sinal - Darwin.pubxml" />
     <Content Include="Scripts\datatables.net\.bower.json" />

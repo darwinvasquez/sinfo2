@@ -43,6 +43,29 @@ namespace sinal.Areas.Indicadores.Models
         [Display(Name = "Vigente")]
         public bool Vigente { get; set; }
 
+        ///// <summary>
+        ///// Usuario crea
+        ///// </summary>
+        [Column("UsuarioCreacion")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son 255")]
+        [Display(Name = "UsuarioCreacion")]
+        public string UsuarioCreacion { get; set; }
+
+        ///// <summary>
+        ///// Fecha crea
+        ///// </summary>
+        [Column("FechaCreacion")]
+        [Display(Name = "FechaCreacion")]
+        public DateTime FechaCreacion { get; set; }
+
+        ///// <summary>
+        ///// Maquina crea
+        ///// </summary>
+        [Column("MaquinaCreacion")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "La canitdad máxima de caracteres son {0}")]
+        [Display(Name = "MaquinaCreacion")]
+        public string MaquinaCreacion { get; set; }
+
 
         /// <summary>
         /// Nombre variable
@@ -51,6 +74,8 @@ namespace sinal.Areas.Indicadores.Models
         [Required]       
         [Display(Name ="Indicador")] 
         public int IndicadorId { get; set; }
+
+
 
         #region Propiedades de navegación
         /// <summary>
